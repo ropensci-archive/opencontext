@@ -26,6 +26,20 @@ oc_get_countries <- function(country, type = c("projects", "locations",
   oc_get_records(country, type, category = "countries")
 }
 
+#' Retrieve the names of projects in a given Country and Location
+#'
+#' @param country A country name
+#' @param locations A character vector of locations in that country
+#' @examples
+#' oc_get_locations("Turkey", "Ulucak")
+#' @export
+oc_get_locations <- function(country, locations, type = c("projects", "descriptions")){
+  type <- match.arg(type)
+  oc_get_countries(country, type = "locations") %>%
+  filter_(~label %in% locations) %>%
+  oc_get_records(type)
+}
+
 #' Retrieve data given an Open Context project name
 #'
 #' @param project A character vector of project names

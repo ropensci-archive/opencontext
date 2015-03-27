@@ -3,6 +3,7 @@
 S3method(filter_,oc_dataframe)
 export(oc_browse)
 export(oc_get_countries)
+export(oc_get_locations)
 export(oc_get_projects)
 import(dplyr)
 import(httr)
