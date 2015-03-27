@@ -1,0 +1,19 @@
+Package: opencontext
+Type: Package
+Title: API Client for the Open Context Archeological Database
+Version: 0.0.1.9000
+Date: 2015-03-27
+Authors@R: c(
+    person("Ben", "Marwick", role = c("aut", "cre"),
+    email = "bmarwick@uw.edu"),
+    person("Scott", "Chamberlain", role = c("aut"),
+    email = "scott@ropensci.org"),
+    person("Lincoln", "Mullen", role = c("aut"),
+    email = "lincoln@lincolnmullen.com")
+    )
+Description: Search, browse, and download data from Open Context
+License: MIT + file LICENSE
+LazyData: TRUE
+VignetteBuilder: knitr
+URL: https://github.org/ropensci/opencontext/
+BugReports: https://github.org/ropensci/opencontext/issues
