@@ -19,4 +19,5 @@ URL: https://github.org/ropensci/opencontext/
 BugReports: https://github.org/ropensci/opencontext/issues
 Imports: httr,
     jsonlite
-Suggests: knitr
+Suggests: knitr,
+    testthat
