@@ -3,4 +3,5 @@
 #' @name opencontext
 #' @docType package
 #' @import httr
+#' @import jsonlite
 NULL
