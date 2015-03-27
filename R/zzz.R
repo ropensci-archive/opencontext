@@ -9,6 +9,7 @@ filter_.oc_dataframe <- function(data, ...) {
 
 # A constructor function for the OC data frame
 oc_dataframe <- function(x) {
+  x <- tbl_df(x)
   class(x) <- c("oc_dataframe", class(x))
   x
 }
