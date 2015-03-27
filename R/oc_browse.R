@@ -12,7 +12,8 @@
 #'   or \code{'descriptions'} to get a data frame of data attributes that are
 #'   widely used in Open Context data sets.
 #' @param print_url Whether or not to display a message with the URL of the
-#'   query.
+#'   query. You can navigate to this URL to see the web interface's version of
+#'   the data returned by the API.
 #' @param ... Additional arguments passed to \code{\link[httr]{GET}}.
 #' @return A data frame with additional class \code{oc_dataframe}.
 #' @examples
@@ -24,10 +25,11 @@ oc_browse <- function(type = c("countries", "projects", "descriptions"),
 
   type <- match.arg(type)
 
-  url <- paste0(base_url(), "sets/", ".json")
+  url <- paste0(base_url(), "sets/")
   if (print_url) message(url)
 
-  req <- GET(url, query = list(), ...)
+  req <- GET(url, query = list(), add_headers("Accept" = "application/ld+json"),
+             ...)
   warn_for_status(req)
 
   response <- content(req, as = "text")
@@ -41,7 +43,7 @@ oc_browse <- function(type = c("countries", "projects", "descriptions"),
          "descriptions"  = result$`oc-api:has-facets`$`oc-api:has-id-options`[[3]]
   )
 
-  class(result) <- c("oc_dataframe", class(result))
+  class(result) <- c("oc_dataframe", "tbl_df", "tbl", class(result))
 
   result
 
