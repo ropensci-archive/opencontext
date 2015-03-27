@@ -20,17 +20,30 @@
 #'   oc_get_countries(type = "locations")
 #'
 #' @export
-oc_get_countries <- function(countries,
-                             type = c("projects", "locations", "descriptions")) {
-  UseMethod("oc_get_countries")
+oc_get_countries <- function(country, type = c("projects", "locations",
+                                               "descriptions")) {
+  type <- match.arg(type)
+  oc_get_records(country, type, category = "countries")
 }
 
+#' Retrieve data given an Open Context project name
+#'
+#' @param project A character vector of project names
+#' @return A data frame of resources associated with the projects.
+#' @examples
+#' oc_get_projects("Kenan Tepe")
 #' @export
-oc_get_countries.oc_dataframe <- function(countries, type = c("projects",
-                                          "locations", "descriptions")) {
+oc_get_projects <- function(project) {
+  oc_get_records(project, type = "projects", category = "projects")
+}
 
-  type <- match.arg(type)
-  result <- countries %>%
+oc_get_records <- function(field, type, category) {
+  UseMethod("oc_get_records")
+}
+
+oc_get_records.oc_dataframe <- function(field, type, category) {
+
+  result <- field %>%
               rowwise() %>%
               do(get_row(., type = type)) %>%
               ungroup()
@@ -39,14 +52,11 @@ oc_get_countries.oc_dataframe <- function(countries, type = c("projects",
 
 }
 
-#' @export
-oc_get_countries.character <- function(countries, type = c("projects",
-                                       "locations", "descriptions")) {
+oc_get_records.character <- function(field, type, category) {
 
-  type <- match.arg(type)
-  oc_browse(type = "countries") %>%
-    filter_(~tolower(label) %in% tolower(countries)) %>%
-    oc_get_countries()
+  oc_browse(type = category) %>%
+    filter_(~tolower(label) %in% tolower(field)) %>%
+    oc_get_records(type = type)
 
 }
 
