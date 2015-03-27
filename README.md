@@ -59,7 +59,7 @@ To browse the locations that have archaeological data in Turkey, run `locations$
 Browse projects
 ---------------
 
-To inspect the projects available for a location in a country, for example Ulucak:
+To inspect the projects available for a location in a country, for example Ulucak in Turkey:
 
 ``` r
 oc_get_locations("Turkey", "Ulucak")
