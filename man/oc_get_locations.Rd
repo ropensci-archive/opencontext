@@ -10,6 +10,8 @@ oc_get_locations(country, locations, type = c("projects", "descriptions"))
 \item{country}{A country name}
 
 \item{locations}{A character vector of locations in that country}
+
+\item{type}{The type of records to return.}
 }
 \description{
 Retrieve the names of projects in a given Country and Location

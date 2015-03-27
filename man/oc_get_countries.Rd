@@ -7,12 +7,12 @@
 oc_get_countries(country, type = c("projects", "locations", "descriptions"))
 }
 \arguments{
+\item{country}{A character vectory of country names or a data frame
+returned from \code{\link{oc_browse}}.}
+
 \item{type}{The type of data to return: \code{"projects"},
 \code{"locations"}, \code{"descriptions"}. The default is
 \code{"projects"}.}
-
-\item{countries}{A character vectory of country names or a data frame
-returned from \code{\link{oc_browse}}.}
 }
 \value{
 A data frame with the additional class \code{oc_dataframe}.

@@ -5,7 +5,7 @@
 #' related to those countries. The function can return projects, locations, or
 #' descriptions.
 #'
-#' @param countries A character vectory of country names or a data frame
+#' @param country A character vectory of country names or a data frame
 #'   returned from \code{\link{oc_browse}}.
 #' @param type The type of data to return: \code{"projects"},
 #'   \code{"locations"}, \code{"descriptions"}. The default is
@@ -30,6 +30,7 @@ oc_get_countries <- function(country, type = c("projects", "locations",
 #'
 #' @param country A country name
 #' @param locations A character vector of locations in that country
+#' @param type The type of records to return.
 #' @examples
 #' oc_get_locations("Turkey", "Ulucak")
 #' @export
