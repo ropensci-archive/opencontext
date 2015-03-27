@@ -28,8 +28,7 @@ oc_browse <- function(type = c("countries", "projects", "descriptions"),
   url <- paste0(base_url(), "sets/")
   if (print_url) message(url)
 
-  req <- GET(url, query = list(), add_headers("Accept" = "application/ld+json"),
-             ...)
+  req <- GET(url, query = list(), accept_json(), ...)
   warn_for_status(req)
 
   response <- content(req, as = "text")
@@ -43,8 +42,6 @@ oc_browse <- function(type = c("countries", "projects", "descriptions"),
          "descriptions"  = result$`oc-api:has-facets`$`oc-api:has-id-options`[[3]]
   )
 
-  class(result) <- c("oc_dataframe", "tbl_df", "tbl", class(result))
-
-  result
+  oc_dataframe(result)
 
 }

@@ -15,7 +15,8 @@ or \code{'descriptions'} to get a data frame of data attributes that are
 widely used in Open Context data sets.}
 
 \item{print_url}{Whether or not to display a message with the URL of the
-query.}
+query. You can navigate to this URL to see the web interface's version of
+the data returned by the API.}
 
 \item{...}{Additional arguments passed to \code{\link[httr]{GET}}.}
 }

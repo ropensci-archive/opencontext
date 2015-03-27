@@ -4,4 +4,5 @@
 #' @docType package
 #' @import httr
 #' @import jsonlite
+#' @import dplyr
 NULL

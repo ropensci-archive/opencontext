@@ -18,6 +18,7 @@ VignetteBuilder: knitr
 URL: https://github.org/ropensci/opencontext/
 BugReports: https://github.org/ropensci/opencontext/issues
 Imports: httr,
-    jsonlite
+    jsonlite,
+    dplyr
 Suggests: knitr,
     testthat
