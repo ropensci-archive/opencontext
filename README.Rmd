@@ -1,0 +1,23 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+## opencontext: An R API client for the Open Context archeological database
+
+[Open Context](http://opencontext.org/)
+
+--
+[![ropensci_footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+
