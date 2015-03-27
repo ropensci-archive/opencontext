@@ -17,3 +17,5 @@ LazyData: TRUE
 VignetteBuilder: knitr
 URL: https://github.org/ropensci/opencontext/
 BugReports: https://github.org/ropensci/opencontext/issues
+Imports: httr
+Suggests: knitr
