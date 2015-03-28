@@ -39,10 +39,9 @@ To browse the countries that Open Context has data on:
 
 ```{r}
 countries <- oc_browse("countries")
-countries
 ```
 
-The result is a data table that include the names of the countries in `countries$labels`, and URLs that we can use to get more information about what projects, etc. are avialable for each country in `countries$id`
+The result is a data table that include the names of the countries in `countries$label`, and URLs that we can use to get more information about what projects, etc. are avialable for each country in `countries$id`
 
 ## Browse locations
 
@@ -55,22 +54,18 @@ locations <- oc_browse(type = "countries") %>%
    oc_get_countries(type = "location")
 ```
 
-Alternatively:
-
-```{r}
-oc_get_countries("Turkey")
-```
-
-
-To browse the locations that have archaeological data in Turkey, run `locations$label`
+To browse the locations that have archaeological data in Turkey, run `locations$label`. We can see that the first location in this example is Çatalhöyük. 
 
 ## Browse projects
 
-To inspect the projects available for a location in a country, for example Ulucak in Turkey:
+To inspect the projects available for a location in a country, for example, for Çatalhöyük in Turkey:
 
 ```{r}
-oc_get_locations("Turkey", "Ulucak")
+projects_at_Çatalhöyük_Turkey <- oc_get_locations("Turkey", "Çatalhöyük")
 ```
+
+Once again, the `label` column has the names of the projects: `projects_at_Çatalhöyük_Turkey$label`. With a little further effort we can browse excavation/survey areas witin the project, and get datasets of measurements of objects collected from these areas (along with chronological and spatial data for these objects).
+
 
 
 ---
