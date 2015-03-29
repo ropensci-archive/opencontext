@@ -1,8 +1,8 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 [![Travis-CI Build Status](https://travis-ci.org/ropensci/opencontext.png?branch=master)](https://travis-ci.org/ropensci/opencontext)
 
-opencontext: An R API client for the Open Context archeological data repository
--------------------------------------------------------------------------------
+opencontext: An R API client for the Open Context archaeological data repository
+--------------------------------------------------------------------------------
 
 This packages enables browsing and downloading data from [Open Context](http://opencontext.org/) using R. Open Context reviews, edits, and publishes archaeological research data and archives data with university-backed repositories, including the California Digital Library.
 
