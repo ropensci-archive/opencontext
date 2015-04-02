@@ -61,6 +61,11 @@ Once again, the `label` column has the names of the projects: `projects_at_Çata
 
 With a little further effort we can browse excavation/survey areas within the project, and get datasets of measurements of objects collected from these areas (along with chronological and spatial data for these objects).
 
+Get data from a specific project
+--------------------------------
+
+Now that we've identified a specific project, we can ingest data from that project into our R session.
+
 ------------------------------------------------------------------------
 
 [![ropensci\_footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)

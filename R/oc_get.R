@@ -93,7 +93,8 @@ get_row <- function(row, type) {
   result <- switch(type,
          "locations" = result$`oc-api:has-facets`$`oc-api:has-id-options`[[1]],
          "projects"  = result$`oc-api:has-facets`$`oc-api:has-id-options`[[2]],
-         "descriptions"  = result$`oc-api:has-facets`$`oc-api:has-id-options`[[3]]
+         "descriptions"  = result$`oc-api:has-facets`$`oc-api:has-id-options`[[3]],
+         "four"  = result$`oc-api:has-facets`$`oc-api:has-id-options`[[4]]
   )
 
   result
