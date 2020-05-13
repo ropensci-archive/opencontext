@@ -11,7 +11,7 @@ Authors@R: c(
     person("Lincoln", "Mullen", role = c("aut"),
     email = "lincoln@lincolnmullen.com")
     )
-Description: Search, browse, and download data from Open Context
+Description: Search, browse, and download data from Open Context (<https://opencontext.org>)
 License: MIT + file LICENSE
 LazyData: TRUE
 VignetteBuilder: knitr
